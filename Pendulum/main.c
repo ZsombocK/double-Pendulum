@@ -77,6 +77,7 @@ typedef struct
     Rectangle rectangle;
 } Button;
 
+//CHECKING IF BUTTON IS HOWERED OR NOT
 bool check_button_howered(Button button)
 {
     Vector2 mouse = GetMousePosition();
@@ -92,6 +93,7 @@ bool check_button_howered(Button button)
     return true;
 }
 
+//DRAWS THE BUTTON ON SCREEN DEPENDING ON ITS STATE
 void draw_button(Button button)
 {
     Color textColor = button.active ? BLACK : WHITE;
@@ -101,6 +103,7 @@ void draw_button(Button button)
     DrawText(button.text, button.rectangle.x + offset, button.rectangle.y + offset, button.rectangle.width / 8, textColor);
 }
 
+//DRAWS THE CURRENT DATAS
 void draw_texts(Pendulum pendulum1, Pendulum pendulum2)
 {
     char text[64];
